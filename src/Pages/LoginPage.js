@@ -47,6 +47,8 @@ const LoginPage = () => {
   );
 };
 
+const ss = StyleSheet
+
 const styles = {
   pageStye: {
     display: "flex",
