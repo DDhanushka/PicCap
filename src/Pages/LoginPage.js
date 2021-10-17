@@ -1,12 +1,15 @@
 import React from "react";
-import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
+
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import MyAppBar from "../Components/MyAppBar";
+import LoginForm from "../Components/LoginForm";
 
-const Login = () => {
+const LoginPage = () => {
   const auth = getAuth();
   const signUp = () => {
     createUserWithEmailAndPassword(auth, "dd@g.com", "1234enter")
@@ -36,26 +39,21 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login page</h2>
-      <Button
-        variant="contained"
-        onClick={() => {
-          signUp();
-        }}
-      >
-        Sign up
-      </Button>
-      <Button
-        variant="outlined"
-        onClick={() => {
-          signIn();
-        }}
-      >
-        Sign in
-      </Button>
+    <div styles={styles.pageStye}>
+      <MyAppBar />
+
+      <LoginForm />
     </div>
   );
 };
 
-export default Login;
+const styles = {
+  pageStye: {
+    display: "flex",
+    alignItems: "center",
+    margin: 0,
+    padding: 0,
+  },
+};
+
+export default LoginPage;
