@@ -1,22 +1,29 @@
 import React from "react";
 import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
+import { spacing } from "@mui/system";
 
 const LoginForm = () => {
   return (
-    <div style={style.form}>
+    <Box sx={{ mx: "auto", width: 600 }}>
+    
+      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       <Button variant="contained" onClick={() => null}>
         Sign up
       </Button>
       <Button variant="outlined" onClick={() => null}>
         Sign in
       </Button>
-    </div>
+    </Box>
   );
 };
 
 const style = {
   form: {
-    backgroundColor: "green",
+    display: "flex",
+    flexDirection: "center",
   },
 };
 
