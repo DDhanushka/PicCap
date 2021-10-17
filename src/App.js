@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import Login from "./Pages/LoginPage";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -12,6 +12,8 @@ import Login from "./Pages/LoginPage";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import HomePage from "./Pages/HomePage";
+import AboutPage from "./Pages/AboutPage";
+import LoginPage from "./Pages/LoginPage";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
@@ -46,17 +48,17 @@ const App = () => {
     <Router>
       <div>
         <Switch>
-          {signedIn ? (
-            <>
-              <Route path="/Home">
-                <HomePage />
-              </Route>
-            </>
-          ) : (
-            <Route path="/">
-              <Login />
-            </Route>
-          )}
+          <Route path="/home">
+            <HomePage />
+          </Route>
+
+          <Route path="/login">
+            <LoginPage />
+          </Route>
+
+          <Route path="/about">
+            <AboutPage /> 
+          </Route>
         </Switch>
       </div>
     </Router>
