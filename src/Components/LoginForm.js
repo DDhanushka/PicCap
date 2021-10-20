@@ -7,7 +7,6 @@ import { spacing } from "@mui/system";
 const LoginForm = () => {
   return (
     <Box sx={{ mx: "auto", width: 600 }}>
-    
       <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       <Button variant="contained" onClick={() => null}>
@@ -15,6 +14,10 @@ const LoginForm = () => {
       </Button>
       <Button variant="outlined" onClick={() => null}>
         Sign in
+      </Button>
+      <Text>Forgot Password</Text>
+      <Button variant="outlined" onClick={() => null}>
+        Forgot Password
       </Button>
     </Box>
   );
