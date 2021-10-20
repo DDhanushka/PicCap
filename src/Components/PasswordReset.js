@@ -10,14 +10,7 @@ const LoginForm = () => {
       <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       <Button variant="contained" onClick={() => null}>
-        Sign up
-      </Button>
-      <Button variant="outlined" onClick={() => null}>
-        Sign in
-      </Button>
-      <Text>Forgot Password</Text>
-      <Button variant="outlined" onClick={() => null}>
-        Forgot Password
+        Reset Password
       </Button>
     </Box>
   );
